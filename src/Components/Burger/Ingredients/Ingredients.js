@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Ingredients.module.css'
 
-class Ingredients extends Component {
+class Ingredients extends Component { // for different ingredient values passed here, return css styles accordingly
 
     render () {
         let ingredient = null;

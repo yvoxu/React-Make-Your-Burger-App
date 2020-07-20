@@ -10,10 +10,12 @@ const controls = [
     { label: 'Meat', type: 'meat' },
 ];
 
-const burgerControls = (props) => (
+const burgerControls = (props) => ( //render a list of build controls with Order button
     <div className={classes.BuildControls}>
-        <p>Current price: {props.price.toFixed(2)}</p>
+        {/* round the price value into 2 decimal */}
+        <p>Current price: {props.price.toFixed(2)}</p> 
     
+        {/* loop through the controls array and pass info accordingly into a single BuildControl component */}
         {controls.map(ctrl => (
             <BuildControl 
             key={ctrl.label} 
@@ -26,7 +28,9 @@ const burgerControls = (props) => (
 
         <button 
             className={classes.OrderButton} 
-            disabled={!props.purchasable}>
+            disabled={!props.purchasable}
+            onClick={props.ordered}
+            >
             ORDER NOW
         </button>
     </div>
