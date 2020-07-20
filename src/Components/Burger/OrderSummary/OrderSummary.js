@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Aux from '../../../hoc/Aux'
+import Button from '../../UI/Button/Button'
 
-const orderSummary = (props) => {
+const orderSummary = (props) => { //an order summary pop up which appears after Order button is clicked
 
     const ingredientSummary = Object.keys(props.ingredients) //transfer the js object into an array of ingredient keys: [salad, meat...]
         .map(igKey => {
@@ -19,7 +20,9 @@ const orderSummary = (props) => {
             <ul>
                 {ingredientSummary}
             </ul>
-            <button>Continue to Checkout</button>
+            <p>Continue to Checkout?</p>
+            <Button btnType="Danger" clicked={props.purchaseCancelled}>No</Button>
+            <Button btnType="Success" clicked={props.purchaseContinued}>Yes</Button>
         </Aux>
     )
 }
