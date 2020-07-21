@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Aux from '../../../hoc/Aux'
-import Button from '../../UI/Button/Button'
+import Aux from '../../../hoc/Aux';
+import Button from '../../UI/Button/Button';
 
 const orderSummary = (props) => { //an order summary pop up which appears after Order button is clicked
 
