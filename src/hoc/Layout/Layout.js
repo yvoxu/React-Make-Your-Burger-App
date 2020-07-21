@@ -10,12 +10,12 @@ class Layout extends Component {
         showSideDrawer: false
     }
 
-    sideDrawerClosedHandler = () => {
+    sideDrawerClosedHandler = () => { //manupilate the side drawer and backdrop to be visible or not
         this.setState( { showSideDrawer: false } );
     }
 
     sideDrawerToggleHandler = () => {
-        this.setState( ( prevState ) => {
+        this.setState( ( prevState ) => { //use this func syntax to avoid unexpected outcomes
             return { showSideDrawer: !prevState.showSideDrawer };
         } );
     }
